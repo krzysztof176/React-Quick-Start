@@ -1,16 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { Provider } from 'react-redux';
+import store from './store/configureStore';
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>
-            <div className="container">
-                <h1>Hello Project</h1>
-            </div>
+render(
+    <Provider store={store}>
+        <div> 
+            <h1>Hello Project</h1>
         </div>
-    }
-}
-
-let App = document.getElementById("app");
-
-ReactDOM.render(<HelloMessage />, App);
+    </Provider>,
+    document.getElementById("root")
+);
