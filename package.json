@@ -4,7 +4,6 @@
   "description": "React Quick Start",
   "author": "Krzysztof Andres",
   "private": true,
-  "main": "../src/index.js",
   "scripts": {
     "start": "parcel public/index.html --open",
     "build": "parcel build public/index.html"
