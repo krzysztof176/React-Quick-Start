@@ -4,7 +4,7 @@ class MainPage extends React.Component {
     render() {
         return(
             <div>
-            hi
+                Let's Go
             </div>
         );
     }

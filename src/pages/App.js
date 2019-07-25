@@ -1,6 +1,5 @@
 import React from 'react';
 import MainPage from './MainPage';
-import { hot } from 'react-hot-loader';
 
 class App extends React.Component {
     render() {
@@ -11,4 +10,4 @@ class App extends React.Component {
     }
 }
 
-export default hot(module)(App);
+export default App;
