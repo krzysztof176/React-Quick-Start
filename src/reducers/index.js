@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux';
-import { dataReducer } from './dataReducer';
+// Reducers
+import {combineReducers} from 'redux';
+import {screenReducer} from './screenReducer';
+import {notificationReducer} from './notificationReducer';
 
 export default combineReducers({
-    dataReducer
+    screenReducer,
+    notificationReducer,
 });

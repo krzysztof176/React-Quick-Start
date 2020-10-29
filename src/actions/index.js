@@ -1,14 +1,18 @@
-import * as dataActions from './dataActions';
+// ActionTypes and Actions
+import * as screenActions from './screenActions';
+import * as notificationActions from './notificationActions';
 
 const actionTypes = {
-    ...dataActions.actionTypes
+    ...screenActions.actionTypes,
+    ...notificationActions.actionTypes,
 };
 
 const actions = {
-    ...dataActions.actions
+    ...screenActions.actions,
+    ...notificationActions.actions,
 };
 
 export {
     actionTypes,
-    actions
+    actions,
 };

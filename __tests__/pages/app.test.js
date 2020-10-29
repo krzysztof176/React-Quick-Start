@@ -1,13 +1,26 @@
-import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import App from "../../src/pages/App";
-import Adapter from "enzyme-adapter-react-16";
+// Pages
+import MainPage from '../../src/pages/MainPage';
 
-Enzyme.configure({ adapter: new Adapter() });
+// Test Utils
+import {generateTestWrapperUtils, testRenderContainsChildComponent} from '../TestUtils';
 
-describe("App Testing Suit", () => {
-    test("renders", () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper.exists()).toBe(true);
+// Test Component
+import App from '../../src/pages/App';
+
+jest.mock('../../src/pages/MainPage');
+
+const {constructMountedWrapper} = generateTestWrapperUtils();
+
+describe('App Page Tests', () => {
+    describe('DOM Render', () => {
+        const {wrapper, unmountComponent} = constructMountedWrapper(App);
+
+        test('Renders Main Page', () => {
+            testRenderContainsChildComponent(wrapper, MainPage);
+        });
+
+        afterAll(() => {
+            unmountComponent();
+        });
     });
-}); 
+});
